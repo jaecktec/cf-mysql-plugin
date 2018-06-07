@@ -7,7 +7,6 @@ Cloud Foundry apps. Use it to
 
 * inspect databases for debugging purposes
 * manually adjust schema or contents in development environments
-* dump and restore databases
 
 ## Contents
 

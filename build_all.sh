@@ -2,7 +2,7 @@
 set -e
 set -o pipefail
 
-BINARY="cf-mysql-plugin"
+BINARY="cf-psql-plugin"
 
 main() {
     ginkgo -r --randomizeAllSpecs --randomizeSuites --failOnPending --cover --trace --race --compilers=2
@@ -63,32 +63,32 @@ print_release_yaml() {
     updated=$(date "+%Y-%m-%dT%H:%M:%S%z")
 
     cat <<EOF
-- name: mysql-plugin
-  description: Runs mysql and mysqldump clients against your CF database services. Use it to inspect, dump and restore your DB.
+- name: psql-plugin
+  description: Runs psql clients against your CF database services. Use it to inspect, dump and restore your DB.
   version: ${version}
   created: 2017-02-02T09:30:00Z
   updated: ${updated}
   company:
   authors:
-  - name: Andreas Fleig
-    homepage: https://github.com/andreasf
-    contact: afleig@pivotal.io
-  homepage: https://github.com/andreasf/cf-mysql-plugin
+  - name: Constantin Jaeck
+    homepage: https://github.com/jaecktec
+    contact: constantin@vw-dilab.com
+  homepage: https://github.com/jaecktec/cf-psql-plugin
   binaries:
   - platform: osx
-    url: https://github.com/andreasf/cf-mysql-plugin/releases/download/v${version}/${BINARY}-darwin-amd64
+    url: https://github.com/jaecktec/cf-psql-plugin/releases/download/v${version}/${BINARY}-darwin-amd64
     checksum: ${hash_darwin_amd64}
   - platform: win64
-    url: https://github.com/andreasf/cf-mysql-plugin/releases/download/v${version}/${BINARY}-amd64.exe
+    url: https://github.com/jaecktec/cf-psql-plugin/releases/download/v${version}/${BINARY}-amd64.exe
     checksum: ${hash_windows_amd64}
   - platform: win32
-    url: https://github.com/andreasf/cf-mysql-plugin/releases/download/v${version}/${BINARY}-386.exe
+    url: https://github.com/jaecktec/cf-psql-plugin/releases/download/v${version}/${BINARY}-386.exe
     checksum: ${hash_windows_386}
   - platform: linux32
-    url: https://github.com/andreasf/cf-mysql-plugin/releases/download/v${version}/${BINARY}-linux-386
+    url: https://github.com/jaecktec/cf-psql-plugin/releases/download/v${version}/${BINARY}-linux-386
     checksum: ${hash_linux_386}
   - platform: linux64
-    url: https://github.com/andreasf/cf-mysql-plugin/releases/download/v${version}/${BINARY}-linux-amd64
+    url: https://github.com/jaecktec/cf-psql-plugin/releases/download/v${version}/${BINARY}-linux-amd64
     checksum: ${hash_linux_amd64}
 EOF
 }

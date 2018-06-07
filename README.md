@@ -1,5 +1,5 @@
 # Cloud Foundry CLI PSQL Plugin
-
+[![Build Status](https://travis-ci.org/jaecktec/cf-psql-plugin.svg?branch=master)](https://travis-ci.org/jaecktec/cf-psql-plugin)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/jaecktec/cf-psql-plugin/blob/master/LICENSE)
 
 cf-psql-plugin makes it easy to connect the `psql` command line client to any PSQL-compatible database used by

@@ -1,27 +1,26 @@
 language: go
-
 go:
-- "1.10"
-
+- '1.10'
 install:
 - go get -v github.com/onsi/ginkgo/ginkgo
 - go get -v github.com/onsi/gomega
 - go get -v -t ./...
 - export PATH=$PATH:$HOME/gopath/bin
 
-script: ./build_all.sh
+script: "./build_all.sh"
 
-# deploy:
-#   skip_cleanup: true
-#   provider: releases
-#   api_key:
-#     secure: ONgfa6uGlzqX9HKizki9Hemw2b68/0d+vlFsq+k6R0KQKhzmD7TnuUNewpAC4ELQtPUQtttknplwLpdPPhY/JcUxJ7/GHxuToeFRzT4Zz8aU6zuCeegM9rRRjPsRtYeB5OHLtiresmPng1OfEhWBoaeOS0aBHb/aQKORQTYr86Q6v7L2u43ikfXMzqFZtjdJnvNbRZqBY/8HfUKhGDhFeW8WXvXvyvFIHmoLKWgcznbW2bBh8GKdv+O/1JPqfAnSZhHrTYV/k+kW6zx8Qyq2VfvN/r97zfjxoDxTHumnyWmZyozXIoHlPxF8aR6OtmSybEV2QvWNwUkhBpKQtvvFn3+egQlfJjdRBizJXYgSwry4307WpY+cBz6rEdN8JajOAXff03uC1mLxsK527afengjuEI/d6lLAKuyz0985yTH/pqetowOwE8U8+BSRwc7/ja8VBAmCv7HS2sI0qsyoaDpunFBeRS8s/QVTsgoKsFtLzHI69vywo/rqUqOJFi3KxPVghdN3vE6f5IauvQeNuDIpV9+7kB9tBoGQjvq52m4woyv/gXWgQl8mS/naY33w4QA3XAQnO0WIoKBq6Et0/wVmpOByJpQGGFS6gvs5QmK+NlV012CAPskwPixuot5np8uJqjXAw1ynGQ1OGh+DvURBD2o+++ij0NLKLWCFacg=
-#   file:
-#     - output/cf-psql-plugin-linux-amd64
-#     - output/cf-psql-plugin-linux-386
-#     - output/cf-psql-plugin-darwin-amd64
-#     - output/cf-psql-plugin-amd64.exe
-#     - output/cf-psql-plugin-386.exe
-#   on:
-#     tags: true
+deploy:
+  skip_cleanup: true
+  provider: releases
+  api_key:
+    secure: B/Cgg9LXQ/nLpcVYgzqw3F7RyX28Wl2EUqPBlCSXSSsH8LYwYy8txqs7P5O2PXEFkcqLdhEsRGSkoMswQQ76a5FomcdUPbZw2GUOW+octycCv/VvzzjKEOavngF+Ilh9BBh4f8RpVrE9iwVnkl4icHMdPl9G/W2y12cKwHEO04jJbqNiGzj8t0PM8wIRsZnPBzSZ+SDbtSbcSg4zKBBFSquJa8j94WI+5pg4/ge9Az3ZH1f/bHLfb6z4nHjA87zuBQENWO8bzOOdCLrv8DbfFdYsT1cA8WiWQWLpu+OMZVUamuBE3iONw/6f2Z9cNKvk1omhWfP6d2mjK92uv6PVf218otrb4z4PgeaTafrnPejNVZwXlHwthcNhyIyzQVOZed7Ml/ZiBIRYD5y0MAv0mtGmbLVAvtFjEOG829gXTiMFgXvtsLNtRduGeUncCxHQ79OsKSuUuPHGvHBCZ8HGOlpZlYna4eAOmFpH2c8UHhG0CU1FE4+r3vHaU++Q5wx6QecPff31p85sxFFBAdzfyyridFdc3+++lZZHRWkUR9O4/TRH+SxJilmEnDjggzDwZIRcG7dhaB1X7pzAokYyUK4A+Anu6seokWrY7Bg+sDnOZmZA7zL05KopR49OUpFyuXKLy6YdC/yOd0MRW39g8Z+37pG8+6Bn5qDBqjqngmg=
+  file:
+    - output/cf-mysql-plugin-linux-amd64
+    - output/cf-mysql-plugin-linux-386
+    - output/cf-mysql-plugin-darwin-amd64
+    - output/cf-mysql-plugin-amd64.exe
+    - output/cf-mysql-plugin-386.exe
+  on:
+    repo: jaecktec/cf-psql-plugin
+    tags: true
 

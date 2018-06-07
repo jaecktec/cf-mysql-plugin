@@ -1,4 +1,4 @@
-package main_test
+package cfpsql_test
 
 import (
 	. "github.com/onsi/ginkgo"
@@ -9,5 +9,5 @@ import (
 
 func TestCfPsql(t *testing.T) {
 	RegisterFailHandler(Fail)
-	RunSpecs(t, "cf-psql Suite")
+	RunSpecs(t, "CfPsql Suite")
 }

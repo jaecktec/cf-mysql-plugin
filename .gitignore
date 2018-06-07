@@ -29,7 +29,7 @@ _testmain.go
 .idea
 *.iml
 
-cf-mysql-plugin
+cf-psql-plugin
 *.coverprofile
 
 output

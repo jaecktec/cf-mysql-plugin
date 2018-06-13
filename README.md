@@ -34,18 +34,11 @@ Passing the name of a database service will open a PSQL client:
 
 ```bash
 $ cf psql my-db
-Reading table information for completion of table and column names
-You can turn off this feature to get a quicker startup with -A
+psql (10.3, server 9.6.3)
+SSL connection (protocol: TLSv1.2, cipher: DHE-RSA-AES256-GCM-SHA384, bits: 256, compression: off)
+Type "help" for help.
 
-Welcome to the MariaDB monitor.  Commands end with ; or \g.
-Your PSQL connection id is 1377314
-Server version: 5.5.46-log PSQL Community Server (GPL)
-
-Copyright (c) 2000, 2016, Oracle, MariaDB Corporation Ab and others.
-
-Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-
-PSQL [ad_67fd2577d50deb5]> 
+db_aaaaaaaa_bbbb_cccc_dddd_eeeeeeeeeeeee=>
 ```
 
 ## Removing service keys
@@ -55,14 +48,14 @@ when available and never deleted. Keys need to be removed manually before their 
 
 ```bash
 $ cf delete-service -f somedb
-Deleting service somedb in org afleig-org / space acceptance as afleig@pivotal.io...
+Deleting service somedb in org DevProjects / space constantin as constantin@dilab.com...
 FAILED
 Cannot delete service instance. Service keys, bindings, and shares must first be deleted.
 ```
 Deleting the service failed. The CLI hints at service keys and app bindings that might still exist.
 ```bash
 $ cf service-keys somedb
-Getting keys for service instance somedb as afleig@pivotal.io...
+Getting keys for service instance somedb as constantin@dilab.com...
 
 name
 cf-psql
@@ -72,17 +65,24 @@ earlier. After removing the key, the service instance can be deleted:
 
 ```bash
 $ cf delete-service-key -f somedb cf-psql
-Deleting key cf-psql for service instance somedb as afleig@pivotal.io...
+Deleting key cf-psql for service instance somedb as constantin@dilab.com...
 OK
 
 $ cf delete-service -f somedb
-Deleting service somedb in org afleig-org / space acceptance as afleig@pivotal.io...
+Deleting service somedb in org DevProjects / space constantin as constantin@dilab.com...
 OK
 ```
 
 This behavior might change in the future as it's not optimal to leave a key around.
 
 ## Installing and uninstalling
+
+### Pre steps
+You need to have the postgres client in your path. On Mac simply run `brew install postgresql`.
+
+### Installing the plugin
+
+The plugin is currently not available on the cloudfoundry marketplace. I am still waiting for some feedback. 
 
 You can download a binary release or build yourself by running `go build`. Then, install the plugin with
 

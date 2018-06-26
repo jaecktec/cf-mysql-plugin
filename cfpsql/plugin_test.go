@@ -34,7 +34,7 @@ var _ = Describe("Plugin", func() {
 
 			Expect(psqlPlugin.GetMetadata().Name).To(Equal("psql"))
 			Expect(psqlPlugin.GetMetadata().Version).To(Equal(plugin.VersionType{
-				Major: 2,
+				Major: 1,
 				Minor: 0,
 				Build: 0,
 			}))

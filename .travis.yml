@@ -15,11 +15,11 @@ deploy:
   api_key:
     secure: B/Cgg9LXQ/nLpcVYgzqw3F7RyX28Wl2EUqPBlCSXSSsH8LYwYy8txqs7P5O2PXEFkcqLdhEsRGSkoMswQQ76a5FomcdUPbZw2GUOW+octycCv/VvzzjKEOavngF+Ilh9BBh4f8RpVrE9iwVnkl4icHMdPl9G/W2y12cKwHEO04jJbqNiGzj8t0PM8wIRsZnPBzSZ+SDbtSbcSg4zKBBFSquJa8j94WI+5pg4/ge9Az3ZH1f/bHLfb6z4nHjA87zuBQENWO8bzOOdCLrv8DbfFdYsT1cA8WiWQWLpu+OMZVUamuBE3iONw/6f2Z9cNKvk1omhWfP6d2mjK92uv6PVf218otrb4z4PgeaTafrnPejNVZwXlHwthcNhyIyzQVOZed7Ml/ZiBIRYD5y0MAv0mtGmbLVAvtFjEOG829gXTiMFgXvtsLNtRduGeUncCxHQ79OsKSuUuPHGvHBCZ8HGOlpZlYna4eAOmFpH2c8UHhG0CU1FE4+r3vHaU++Q5wx6QecPff31p85sxFFBAdzfyyridFdc3+++lZZHRWkUR9O4/TRH+SxJilmEnDjggzDwZIRcG7dhaB1X7pzAokYyUK4A+Anu6seokWrY7Bg+sDnOZmZA7zL05KopR49OUpFyuXKLy6YdC/yOd0MRW39g8Z+37pG8+6Bn5qDBqjqngmg=
   file:
-    - output/cf-mysql-plugin-linux-amd64
-    - output/cf-mysql-plugin-linux-386
-    - output/cf-mysql-plugin-darwin-amd64
-    - output/cf-mysql-plugin-amd64.exe
-    - output/cf-mysql-plugin-386.exe
+    - output/cf-psql-plugin-linux-amd64
+    - output/cf-psql-plugin-linux-386
+    - output/cf-psql-plugin-darwin-amd64
+    - output/cf-psql-plugin-amd64.exe
+    - output/cf-psql-plugin-386.exe
   on:
     repo: jaecktec/cf-psql-plugin
     tags: true

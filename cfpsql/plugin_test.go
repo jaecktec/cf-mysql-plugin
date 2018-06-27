@@ -32,7 +32,7 @@ var _ = Describe("Plugin", func() {
 		It("Shows the psql plugin with the current version", func() {
 			psqlPlugin, _ := NewPluginAndMocks()
 
-			Expect(psqlPlugin.GetMetadata().Name).To(Equal("psql"))
+			Expect(psqlPlugin.GetMetadata().Name).To(Equal("psql-plugin"))
 			Expect(psqlPlugin.GetMetadata().Version).To(Equal(plugin.VersionType{
 				Major: 1,
 				Minor: 0,

@@ -30,7 +30,7 @@ func NewPsqlPlugin(conf PluginConf) *PsqlPlugin {
 
 func (self *PsqlPlugin) GetMetadata() plugin.PluginMetadata {
 	return plugin.PluginMetadata{
-		Name: "psql",
+		Name: "psql-plugin",
 		Version: plugin.VersionType{
 			Major: 1,
 			Minor: 0,

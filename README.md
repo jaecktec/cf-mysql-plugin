@@ -82,7 +82,11 @@ You need to have the postgres client in your path. On Mac simply run `brew insta
 
 ### Installing the plugin
 
-The plugin is currently not available on the cloudfoundry marketplace. I am still waiting for some feedback. 
+The easiest way is to install from the repository:
+
+```bash
+$ cf install-plugin -r "CF-Community" psql-plugin
+```
 
 You can download a binary release or build yourself by running `go build`. Then, install the plugin with
 
